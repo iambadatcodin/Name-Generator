@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+	customer: <input type="text" id="myText" value="">	<!-- creates text boxes to get user input -->
+	Evironment: <input type="text" id="myText2" value="">
+	Product: <input type="text" id="myText3" value="">
+	Number: <input type="text" id="myText4" value="">
+
+	<button onClick="myFunction()">Done</button>	<!-- Button that calls function when clicked -->
+
+	<p id="demo"></p>
+	<script>
+		function myFunction(){
+			var x = document.getElementById("myText").value;
+			var y = document.getElementById("myText2").value;
+			var z = document.getElementById("myText3").value;
+			var w = document.getElementById("myText4").value
+			//document.getElementById("demo").innerHTML = x + "-" + y +"-"+ z ;
+			i=0;
+			while(i <= w){
+				if (i <= 9)
+					document.write(x+"-"+y+"-"+z+"0"+i +"<br>");	//prints 0-9 with 0 in front ie: 02
+				else
+					document.write(x+"-"+y+"-"+z+i+"<br>")			//prints 10-any number.
+			i++;
+			}
+		}
+	</script>
+</body>
+</html>
